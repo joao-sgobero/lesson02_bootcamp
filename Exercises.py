@@ -38,3 +38,43 @@ square = quad_1 ** 2
 
 print(f"The square of the number {quad_1} is {square}")
 
+
+# 6) Write a program that receives two floating-point numbers and performs their addition.
+float_num1 = float(input("Enter the first floating-point number: "))
+float_num2 = float(input("Enter the second floating-point number: "))
+
+float_sum = float_num1 + float_num2
+
+print(f"The sum of {float_num1} + {float_num2} is {float_sum}")
+
+# 7) Create a program that calculates the average of two floating-point numbers provided by the user.
+float_num1 = float(input("Enter the first floating-point number: "))
+float_num2 = float(input("Enter the second floating-point number: "))
+
+float_avg = (float_num1 + float_num2) / 2
+
+print(f"The average of the numbers {float_num1} and {float_num2} is {float_avg}")
+
+# 8) Develop a program that calculates the power of a number (base and exponent provided by the user).
+base_float = float(input("Enter the base: "))
+expoente_float = float(input("Enter the exponent: "))
+
+float_power = base_float ** expoente_float
+
+print(f"The result of {base_float} raised to the power of {expoente_float} is {float_power}")
+
+# 9) Write a program that converts the temperature from Celsius to Fahrenheit.
+celsius_float = float(input("Enter the temperature in Celsius: "))
+
+fahrenheit_float = (celsius_float * 9/5) + 32
+
+print(f"The temperature of {celsius_float}°C is equivalent to {fahrenheit_float}°F")
+
+# 10) Write a program that calculates the area of a circle, receiving the radius as input.
+import math
+
+radius_float = float(input("Enter the radius of the circle: "))
+
+circle_area = math.pi * (radius_float ** 2)
+
+print(f"The area of the circle with radius {radius_float} is {circle_area:.2f}")
