@@ -104,3 +104,39 @@ print(f'Day: {day}, Month: {month}, Year: {year}')
 string_one = input("Enter the first string: ")
 string_two = input("Enter the second string: ")
 print(string_one + string_two)
+
+# --- Boolean (bool) ---
+
+# 16) Program that evaluates two boolean expressions entered by the user and returns the result of the AND operation
+bool_1 = input("Enter the first boolean value (True/False): ").strip().lower() == 'true'
+bool_2 = input("Enter the second boolean value (True/False): ").strip().lower() == 'true'
+
+and_result = bool_1 and bool_2
+print(f"The result of the AND operation between {bool_1} and {bool_2} is {and_result}")
+
+# 17) Program that receives two boolean values from the user and returns the result of the OR operation
+bool_3 = input("Enter the first boolean value (True/False): ").strip().lower() == 'true'
+bool_4 = input("Enter the second boolean value (True/False): ").strip().lower() == 'true'
+
+or_result = bool_3 or bool_4
+print(f"The result of the OR operation between {bool_3} and {bool_4} is {or_result}")
+
+# 18) Program that asks the user to enter a boolean value and then inverts it
+bool_5 = input("Enter a boolean value (True/False): ").strip().lower() == 'true'
+
+inverted_bool = not bool_5
+print(f"The inverted value of {bool_5} is {inverted_bool}")
+
+# 19) Program that compares if two numbers entered by the user are equal
+num_1 = float(input("Enter the first number: "))
+num_2 = float(input("Enter the second number: "))
+
+are_equal = num_1 == num_2
+print(f"Are the numbers {num_1} and {num_2} equal? {are_equal}")
+
+# 20) Program that checks if two numbers provided by the user are different
+num_3 = float(input("Enter the first number: "))
+num_4 = float(input("Enter the second number: "))
+
+are_different = num_3 != num_4
+print(f"Are the numbers {num_3} and {num_4} different? {are_different}")
