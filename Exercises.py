@@ -1,5 +1,6 @@
 # Exercises
-# Integers (int)
+
+# --- Integers (int) ---
 
 # 1) Write a program that adds two integers entered by the user.
 n1 = int(input("Enter the first number: "))
@@ -38,6 +39,7 @@ square = quad_1 ** 2
 
 print(f"The square of the number {quad_1} is {square}")
 
+# --- Integers (int) ---
 
 # 6) Write a program that receives two floating-point numbers and performs their addition.
 float_num1 = float(input("Enter the first floating-point number: "))
@@ -78,3 +80,27 @@ radius_float = float(input("Enter the radius of the circle: "))
 circle_area = math.pi * (radius_float ** 2)
 
 print(f"The area of the circle with radius {radius_float} is {circle_area:.2f}")
+
+# --- Strings (str) ---
+
+# 11) Convert a string to uppercase
+user_input = input("Enter a phrase: ")
+print(user_input.upper())
+
+# 12) Program that converts the full name to lowercase
+full_name = input("Enter your full name: ")
+print(full_name.lower())
+
+# 13) Program that removes leading and trailing spaces from a string
+sentence = input("Enter a sentence: ")
+print(sentence.strip())
+
+# 14) Program that splits a date into day, month, and year
+date_input = input("Enter a date in the format dd/mm/yyyy: ")
+day, month, year = date_input.split('/')
+print(f'Day: {day}, Month: {month}, Year: {year}')
+
+# 15) Program that concatenates two strings
+string_one = input("Enter the first string: ")
+string_two = input("Enter the second string: ")
+print(string_one + string_two)
