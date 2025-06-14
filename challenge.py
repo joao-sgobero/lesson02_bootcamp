@@ -111,3 +111,25 @@ except ValueError as e:
 
 # Exercise 25: Type Conversion with Validation
 # Create a script that asks the user for a list of numbers separated by commas. The program should convert the input string into a list of integers. Use try-except to handle the conversion of each number and validate that each element of the converted list is an integer. If the conversion fails or an element is not an integer, print an error message. If the conversion is successful for all elements, print the list of integers.
+
+try:
+    # Prompts the user for a list of numbers separated by commas
+    user_input = input("Enter a list of numbers separated by commas: ").strip()
+
+    # Converts the input string into a list
+    str_list = user_input.split(',')
+
+    # Converts each element in the list to an integer
+    int_list = []
+    for item in str_list:
+        try:
+            int_list.append(int(item.strip()))
+        except ValueError:
+            raise ValueError(f"'{item.strip()}' is not a valid number.")
+
+    # Prints the list of integers
+    print(f"The list of integers is: {int_list}")
+
+except ValueError as e:
+    # Catches invalid input error and prints a detailed error message
+    print(f"Error: {e} Please enter valid numbers.")
