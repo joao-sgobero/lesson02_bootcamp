@@ -42,9 +42,41 @@ except ValueError as e:
     # Catches invalid input error and prints a detailed error message
     print(f"Error: {e} Please enter a valid string.")
 
-    
+
 # Exercise 23: Simple Calculator
 # Develop a simple calculator that accepts two numeric inputs and an operator (+, -, *, /) from the user. Use try-except to handle division by zero and non-numeric inputs. Use if-elif-else to perform the mathematical operation based on the given operator. Print the result or an appropriate error message.
+
+try:
+    # Prompts the user for two numbers and an operator
+    num1 = float(input("Enter the first number: ").strip())
+    num2 = float(input("Enter the second number: ").strip())
+    operator = input("Enter the operator (+, -, *, /): ").strip()
+
+    # Checks which operation to perform based on the given operator
+    if operator == "+":
+        result = num1 + num2
+    elif operator == "-":
+        result = num1 - num2
+    elif operator == "*":
+        result = num1 * num2
+    elif operator == "/":
+        # Checks if dividing by zero
+        if num2 == 0:
+            raise ZeroDivisionError("Cannot divide by zero!")
+        result = num1 / num2
+    else:
+        raise ValueError("Invalid operator! Please use +, -, * or /.")
+
+    # Prints the result of the operation
+    print(f"The result of {num1} {operator} {num2} is {result}.")
+
+except ValueError as e:
+    # Catches invalid input error and prints a detailed error message
+    print(f"Error: {e}. Please enter valid numeric values and a valid operator.")
+except ZeroDivisionError as e:
+    # Catches division by zero error and prints a detailed error message
+    print(f"Error: {e}")
+
 
 # Exercise 24: Number Classifier
 # Write a program that prompts the user to input a number. Use try-except to ensure the input is numeric, and use if-elif-else to classify the number as "positive", "negative", or "zero". Additionally, identify whether the number is "even" or "odd".
