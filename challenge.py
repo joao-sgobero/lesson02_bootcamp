@@ -81,5 +81,33 @@ except ZeroDivisionError as e:
 # Exercise 24: Number Classifier
 # Write a program that prompts the user to input a number. Use try-except to ensure the input is numeric, and use if-elif-else to classify the number as "positive", "negative", or "zero". Additionally, identify whether the number is "even" or "odd".
 
+# Exercise 24: Number Classifier
+
+try:
+    # Prompts the user to input a number
+    number = float(input("Enter a number: ").strip())
+
+    # Classifies the number as positive, negative, or zero
+    if number > 0:
+        classification = "positive"
+    elif number < 0:
+        classification = "negative"
+    else:
+        classification = "zero"
+
+    # Checks if the number is even or odd
+    if number % 2 == 0:
+        even_or_odd = "even"
+    else:
+        even_or_odd = "odd"
+
+    # Displays the classification of the number
+    print(f"The number {number} is {classification} and {even_or_odd}.")
+
+except ValueError as e:
+    # Catches invalid input error and prints a detailed error message
+    print(f"Error: {e} Please enter a valid number.")
+
+
 # Exercise 25: Type Conversion with Validation
 # Create a script that asks the user for a list of numbers separated by commas. The program should convert the input string into a list of integers. Use try-except to handle the conversion of each number and validate that each element of the converted list is an integer. If the conversion fails or an element is not an integer, print an error message. If the conversion is successful for all elements, print the list of integers.
